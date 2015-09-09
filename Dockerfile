@@ -6,6 +6,7 @@ ADD ./webapp/requirements.txt /tmp/requirements.txt
 RUN pip install -qr /tmp/requirements.txt
 ADD ./webapp /opt/webapp/
 WORKDIR /opt/webapp
+RUN echo "to test continuous build"
 EXPOSE 5000
 CMD ["python", "app.py"]
 
